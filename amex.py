@@ -149,13 +149,7 @@ sns.barplot(x='importance',y='feature',data=fold_importance_df.sort_values(by="i
 
 sum1 = lgb_score2.sum(axis=1)/3
 sum2 = lgb_score.sum(axis=1)/5
-sum3 = lgb_score3.sum(axis=1)/5
 sum4 = lgb_score4.sum(axis=1)/6
-answer['score'] = 0.75*sum4 + 0.25*xx['score']
-0.2*sum1 + 0.25*sum3 + 0.45*sum2 + 0.1*xgb_x
-0.1*(sum1) + 0.55* + 0.35*
-
-
-xx = pd.read_csv("submission_xgb_lgb_newest.csv")
+answer['score'] = 0.75*sum4 + 0.25*sum2
 
 answer.to_csv('submission_lgb_dart_3_5_mixed_final.csv',index=False)
